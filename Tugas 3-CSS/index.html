@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TeknoUp — Beranda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">TeknoUp</a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html" class="active">Home</a>
+        <a href="articles.html">Artikel</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+
+      <div class="header-actions">
+        <input class="search" placeholder="Cari artikel..." aria-label="Search">
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>Berita & Artikel Teknologi</h1>
+        <p class="lead">Update, panduan, dan analisis seputar teknologi, pemrograman, dan industri digital.</p>
+        <a href="articles.html" class="btn">Jelajahi Artikel</a>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=60&auto=format&fit=crop" alt="" />
+      </div>
+    </section>
+
+    <section class="container cards-grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img class="card-thumb" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=60&auto=format&fit=crop" alt="AI">
+        <div class="card-body">
+          <h3><a href="article.html">Tren AI 2025: Apa Yang Perlu Kamu Tahu</a></h3>
+          <p class="meta">12 Okt 2025 • Penulis: Dinar</p>
+          <p>Ringkasan singkat mengenai kemajuan AI, model terbaru, dan implikasinya untuk developer dan startup.</p>
+          <a class="readmore" href="article.html">Baca selengkapnya →</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img class="card-thumb" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&q=60&auto=format&fit=crop" alt="Web Dev">
+        <div class="card-body">
+          <h3><a href="article.html">Panduan Modern: Membuat Aplikasi Web Scalable</a></h3>
+          <p class="meta">03 Sep 2025 • Penulis: Dinar</p>
+          <p>Arsitektur, best practices, dan alat untuk membangun aplikasi web yang tahan beban.</p>
+          <a class="readmore" href="article.html">Baca selengkapnya →</a>
+        </div>
+      </article>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="yearIndex"></span> TeknoUp — Artikel Teknologi</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Artikel</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('yearIndex').textContent = new Date().getFullYear();
+  // mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.main-nav');
+  toggle?.addEventListener('click', ()=>nav.classList.toggle('open'));
+</script>
+</body>
+</html>

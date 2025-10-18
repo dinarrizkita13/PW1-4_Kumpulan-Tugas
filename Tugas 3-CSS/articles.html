@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TeknoUp — Artikel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">TeknoUp</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="articles.html" class="active">Artikel</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+      <div class="header-actions">
+        <input class="search" placeholder="Cari artikel..." aria-label="Search">
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container two-col">
+    <section class="posts-list">
+      <h2>Semua Artikel</h2>
+
+      <article class="post">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=60&auto=format&fit=crop" alt="">
+        <div class="post-body">
+          <h3><a href="article.html">Tren AI 2025: Apa Yang Perlu Kamu Tahu</a></h3>
+          <p class="meta">12 Okt 2025 • Dinar</p>
+          <p>Ringkasan pembahasan tren AI, bagaimana developer menyiapkan diri, dan contoh kasus.</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&q=60&auto=format&fit=crop" alt="">
+        <div class="post-body">
+          <h3><a href="article.html">Panduan Modern: Membuat Aplikasi Web Scalable</a></h3>
+          <p class="meta">03 Sep 2025 • Dinar</p>
+          <p>Best practice untuk arsitektur dan deployment aplikasi web yang scalable.</p>
+        </div>
+      </article>
+
+      <!-- tambah post sesuai kebutuhan -->
+    </section>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h4>Tentang TeknoUp</h4>
+        <p>Portal kecil yang membahas teknologi, programming, dan tips cepat untuk developer.</p>
+      </div>
+
+      <div class="widget">
+        <h4>Popular</h4>
+        <ul class="mini-list">
+          <li><a href="article.html">Tren AI 2025</a></li>
+          <li><a href="article.html">Aplikasi Web Scalable</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="yearArticles"></span> TeknoUp</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Artikel</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+    </div>
+  </footer>
+
+<script>document.getElementById('yearArticles').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tentang — TeknoUp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">TeknoUp</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Artikel</a>
+        <a href="about.html" class="active">Tentang</a>
+      </nav>
+      <div class="header-actions">
+        <input class="search" placeholder="Cari artikel..." aria-label="Search">
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about-card">
+      <h1>Tentang TeknoUp</h1>
+      <p>TeknoUp adalah blog teknologi sederhana untuk latihan membuat layout website. Dikelola oleh mahasiswa yang tertarik dengan pengembangan web, AI, dan infrastruktur.</p>
+
+      <h3>Penulis</h3>
+      <p>Nama: Dinar<br>Email: id@email.com</p>
+
+      <h3>Tujuan</h3>
+      <p>Melatih penggunaan HTML5 semantik, Flexbox, Grid, dan membuat tampilan yang responsif untuk tugas kampus.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="yearAbout"></span> TeknoUp</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Artikel</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+    </div>
+  </footer>
+
+<script>document.getElementById('yearAbout').textContent = new Date().getFullYear();</script>
+</body>
+</html>
