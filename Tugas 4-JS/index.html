@@ -25,8 +25,7 @@
     section {
       padding: 20px 50px;
     }
-
-    /* Tombol Scroll ke Atas */
+    
     #scrollTopBtn {
       position: fixed;
       bottom: 30px;
@@ -42,7 +41,7 @@
       cursor: pointer;
       opacity: 0.6;
       transition: opacity 0.3s, transform 0.3s;
-      display: none; /* disembunyikan dulu */
+      display: none;
     }
 
     #scrollTopBtn:hover {
@@ -50,7 +49,6 @@
       transform: scale(1.1);
     }
 
-    /* Konten dummy agar bisa discroll panjang */
     .content {
       height: 2500px;
       background: linear-gradient(180deg, #f2f2f2, #d6e0f0, #b0c4de);
@@ -71,13 +69,11 @@
     </p>
   </section>
 
-  <!-- Tombol Scroll -->
   <button id="scrollTopBtn" title="Kembali ke atas">↑</button>
 
   <script>
     const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-    // Ketika user scroll > 500px, tampilkan tombol
     window.onscroll = function() {
       if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         scrollTopBtn.style.display = "block";
@@ -86,7 +82,6 @@
       }
     };
 
-    // Klik tombol → scroll ke atas
     scrollTopBtn.onclick = function() {
       window.scrollTo({
         top: 0,
