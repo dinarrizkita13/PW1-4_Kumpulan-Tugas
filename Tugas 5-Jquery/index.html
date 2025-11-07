@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show / Hide Password (Button + jQuery)</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .password-container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .password-container h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="password-container">
+    <h3>Masukkan Password</h3>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Ketik password...">
+      <button id="toggleBtn">Show</button>
+    </div>
+  </div>
+
+  <!-- jQuery Script -->
+  <script>
+    $(document).ready(function() {
+      $('#toggleBtn').click(function() {
+        let input = $('#password');
+        let type = input.attr('type');
+
+        if (type === 'password') {
+          input.attr('type', 'text');
+          $(this).text('Hide');
+        } else {
+          input.attr('type', 'password');
+          $(this).text('Show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
 
